@@ -9,7 +9,7 @@ Group:		Development/Databases
 URL:		http://sqliteman.sourceforge.net/
 Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}-%{_snap}.tar.gz
 BuildRequires:	qt4-devel			>= 4.3.0 
-BuildRequires:	qt4-database-plugin-sqlite-lib
+BuildRequires:	qt4-database-plugin-sqlite-%{_lib}
 BuildRequires:	cmake
 BuildRequires:	desktop-file-utils
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -23,13 +23,16 @@ contains the most complette feature set of all tools available.
 %setup -q
 
 %build
-export QTDIR=/usr/lib/qt4/
 
 cmake \
 	-DCMAKE_C_FLAGS="%{optflags}" \
 	-DCMAKE_CXX_FLAGS="%{optflags}" \
 	-DCMAKE_BUILD_TYPE=Release \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} 
+	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	    %if "%{_lib}" != "lib"
+		-DLIB_SUFFIX=64 \
+	    %endif
+	-DQT_QMAKE_EXECUTABLE=/usr/lib/qt4/bin/qmake
 
 %make
 
