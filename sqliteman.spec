@@ -1,17 +1,14 @@
-%define _snap 20070421
-
 Summary:	Lightweigth but powerfull Sqlite3 manager
 Name:		sqliteman
-Version:	0.99
-Release:	%mkrel 0.%{_snap}.1
+Version:	1.0
+Release:	%mkrel 1
 License:	GPL
 Group:		Development/Databases
 URL:		http://sqliteman.sourceforge.net/
-Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}-%{_snap}.tar.gz
+Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}.tar.bz2
 BuildRequires:	qt4-devel			>= 4.3.0 
 BuildRequires:	qt4-database-plugin-sqlite-%{_lib}
 BuildRequires:	cmake
-BuildRequires:	desktop-file-utils
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -41,10 +38,6 @@ cmake \
 
 %makeinstall_std
 
-desktop-file-install --vendor="" \
-	--add-category="X-MandrivaLinux-MoreApplications-Databases" \
-	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
-
 %post
 %{update_menus}
 %if %mdkversion >= 200700
@@ -70,5 +63,7 @@ desktop-file-install --vendor="" \
 %{_iconsdir}/sqliteman.png
 %{_datadir}/%{name}/icons/*.png
 %lang(cs) %{_datadir}/%{name}/sqliteman_cs.qm
+%lang(de) %{_datadir}/%{name}/sqliteman_de.qm
+%lang(en) %{_datadir}/%{name}/sqliteman_en.qm
 %lang(pl) %{_datadir}/%{name}/sqliteman_pl.qm
-															 
+%lang(ru) %{_datadir}/%{name}/sqliteman_ru.qm
