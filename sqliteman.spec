@@ -9,7 +9,6 @@ Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}.tar.bz2
 BuildRequires:	qt4-devel			>= 4.3.0 
 BuildRequires:	qt4-database-plugin-sqlite-%{_lib}
 BuildRequires:	cmake
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The best developer's and/or admin's GUI tool for Sqlite3
