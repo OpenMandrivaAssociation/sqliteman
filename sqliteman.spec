@@ -1,12 +1,12 @@
 Summary:	Lightweigth but powerfull Sqlite3 manager
 Name:		sqliteman
-Version:	1.0
+Version:	1.0.1
 Release:	%mkrel 1
-License:	GPL
+License:	GPLv2+
 Group:		Development/Databases
 URL:		http://sqliteman.sourceforge.net/
 Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}.tar.bz2
-BuildRequires:	qt4-devel			>= 4.3.0 
+BuildRequires:	qt4-devel >= 4.3.0
 BuildRequires:	qt4-database-plugin-sqlite-%{_lib}
 BuildRequires:	cmake
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -65,5 +65,6 @@ cmake \
 %lang(cs) %{_datadir}/%{name}/sqliteman_cs.qm
 %lang(de) %{_datadir}/%{name}/sqliteman_de.qm
 %lang(en) %{_datadir}/%{name}/sqliteman_en.qm
+%lang(it) %{_datadir}/%{name}/sqliteman_it.qm
 %lang(pl) %{_datadir}/%{name}/sqliteman_pl.qm
 %lang(ru) %{_datadir}/%{name}/sqliteman_ru.qm
