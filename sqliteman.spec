@@ -38,15 +38,19 @@ cmake \
 
 %makeinstall_std
 
+%if %mdkversion < 200900
 %post
 %{update_menus}
 %{update_desktop_database}
 %update_icon_cache hicolor
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
 %{clean_desktop_database}
 %clean_icon_cache hicolor
+%endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
