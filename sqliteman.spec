@@ -7,10 +7,18 @@ Group:		Development/Databases
 URL:		http://sqliteman.sourceforge.net/
 Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}.tar.bz2
 BuildRequires:	qt4-devel >= 4.3.0
+%if %mdkversion < 200900
+BuildRequires:	qt4-database-plugin-sqlite-lib
+%else
 BuildRequires:	qt4-database-plugin-sqlite
+%endif
 BuildRequires:	cmake
 BuildRequires:	qscintilla-qt4-devel
+%if %mdkversion < 200900
+Requires:	qt4-database-plugin-sqlite-lib
+%else
 Requires:	qt4-database-plugin-sqlite
+%endif
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
