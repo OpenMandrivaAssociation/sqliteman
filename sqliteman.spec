@@ -1,7 +1,7 @@
 Summary:	Lightweigth but powerfull Sqlite3 manager
 Name:		sqliteman
-Version:	1.2.0
-Release:	%mkrel 2
+Version:	1.2.1
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Databases
 URL:		http://sqliteman.sourceforge.net/
@@ -62,9 +62,11 @@ contains the most complette feature set of all tools available.
 %{_datadir}/applications/sqliteman.desktop
 %{_iconsdir}/sqliteman.png
 %{_datadir}/%{name}/icons/*.png
+%lang(bg) %{_datadir}/%{name}/sqliteman_bg.qm
 %lang(cs) %{_datadir}/%{name}/sqliteman_cs.qm
 %lang(de) %{_datadir}/%{name}/sqliteman_de.qm
 %lang(en) %{_datadir}/%{name}/sqliteman_en.qm
+%lang(fr) %{_datadir}/%{name}/sqliteman_fr.qm
 %lang(it) %{_datadir}/%{name}/sqliteman_it.qm
 %lang(pl) %{_datadir}/%{name}/sqliteman_pl.qm
 %lang(ru) %{_datadir}/%{name}/sqliteman_ru.qm
