@@ -1,6 +1,6 @@
 Summary:	Lightweigth but powerfull Sqlite3 manager
 Name:		sqliteman
-Version:	1.2.1
+Version:	1.2.2
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Databases
@@ -56,12 +56,12 @@ contains the most complette feature set of all tools available.
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
-%defattr(644,root,root,755)
+%defattr(-,root,root)
 %doc %{_datadir}/%{name}/doc/*
-%attr(755,root,root) %{_bindir}/sqliteman
+%{_bindir}/sqliteman
 %{_datadir}/applications/sqliteman.desktop
-%{_iconsdir}/sqliteman.png
 %{_datadir}/%{name}/icons/*.png
+%{_iconsdir}/hicolor/sqliteman.png
 %lang(bg) %{_datadir}/%{name}/sqliteman_bg.qm
 %lang(cs) %{_datadir}/%{name}/sqliteman_cs.qm
 %lang(de) %{_datadir}/%{name}/sqliteman_de.qm
