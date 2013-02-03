@@ -1,24 +1,16 @@
 Summary:	Lightweigth but powerfull Sqlite3 manager
 Name:		sqliteman
 Version:	1.2.2
-Release:	%mkrel 2
+Release:	3
 License:	GPLv2+
 Group:		Development/Databases
 URL:		http://sqliteman.sourceforge.net/
 Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}.tar.bz2
 BuildRequires:	qt4-devel >= 4.3.0
-%if %mdkversion < 200900
-BuildRequires:	qt4-database-plugin-sqlite-lib
-%else
 BuildRequires:	qt4-database-plugin-sqlite
-%endif
 BuildRequires:	cmake
 BuildRequires:	qscintilla-qt4-devel
-%if %mdkversion < 200900
-Requires:	qt4-database-plugin-sqlite-lib
-%else
 Requires:	qt4-database-plugin-sqlite
-%endif
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -34,26 +26,7 @@ contains the most complette feature set of all tools available.
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std -C build
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%{update_desktop_database}
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%{clean_desktop_database}
-%clean_icon_cache hicolor
-%endif
-
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
