@@ -1,7 +1,7 @@
 Summary:	Lightweigth but powerfull Sqlite3 manager
 Name:		sqliteman
 Version:	1.2.2
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Development/Databases
 URL:		http://sqliteman.sourceforge.net/
