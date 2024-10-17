@@ -4,7 +4,7 @@ Version:	1.2.2
 Release:	4
 License:	GPLv2+
 Group:		Development/Databases
-URL:		http://sqliteman.sourceforge.net/
+URL:		https://sqliteman.sourceforge.net/
 Source:		http://downloads.sourceforge.net/sqliteman/%{name}-%{version}.tar.bz2
 BuildRequires:	qt4-devel >= 4.3.0
 BuildRequires:	qt4-database-plugin-sqlite
